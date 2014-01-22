@@ -1,0 +1,37 @@
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/linearLayout" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:orientation="horizontal"
+	android:background="#00000000"
+	android:minHeight="40px"
+	android:gravity="center_vertical"
+	>
+    <ImageView 
+	    android:id="@+id/imageViewSelection" 
+	    android:layout_width="wrap_content" 
+	    android:gravity="center"
+	    android:layout_height="wrap_content"
+	    />
+	<TextView 
+	    android:id="@+id/textViewPlayerName" 
+	    android:text="Thiago Cardoso" 
+	    android:layout_width="250px" 
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="10px"
+	    />
+	 <TextView 
+	    android:id="@+id/textViewPosition" 
+	    android:text="Goleiro" 
+	    android:layout_width="140px" 
+	    android:layout_height="wrap_content"
+	    />
+	 <TextView 
+	    android:id="@+id/textViewStrenght" 
+	    android:text="20" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    />
+
+</LinearLayout>

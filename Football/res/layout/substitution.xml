@@ -1,0 +1,114 @@
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent">
+	
+	<RelativeLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:background="#88000000">
+	
+		<RelativeLayout
+			android:id="@+id/relativeLayoutTopMenu"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:layout_marginTop="70px"
+			android:layout_marginLeft="35px"
+			android:layout_marginRight="35px"
+			android:background="@color/dark_green">
+		    
+		    <TextView 
+		        android:id="@+id/textViewTitle"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="Santa Cruz" 
+		        android:paddingLeft="5px"
+		        android:paddingTop="5px"
+		        android:paddingBottom="5px"
+		        android:background="@color/dark_green_2"/>
+		    
+		    <TextView 
+		        android:id="@+id/textViewTitular"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="Titulares" 
+		        android:paddingLeft="5px"
+		        android:layout_marginTop="10px"
+		        android:layout_marginLeft="5px"
+		        android:layout_marginRight="5px"
+		        android:layout_below="@+id/textViewTitle"
+		        android:background="@color/olive_drab_green"/>
+		    
+		    <ListView 
+				android:id="@+id/listViewSquadTitular" 
+				android:background="@color/dark_olive_green"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/textViewTitular"
+				android:layout_alignLeft="@+id/textViewTitular"
+				android:layout_alignRight="@+id/textViewTitular"
+				android:cacheColorHint="@android:color/transparent"
+				android:listSelector="@android:color/transparent"
+				/>
+		    
+		    <TextView 
+		        android:id="@+id/textViewReserves"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="Reservas" 
+		        android:paddingLeft="5px"
+		        android:layout_alignLeft="@+id/textViewTitular"
+				android:layout_alignRight="@+id/textViewTitular"
+				android:layout_marginTop="10px"
+		        android:layout_below="@+id/listViewSquadTitular"
+		        android:background="@color/olive_drab_green"/>
+		    
+		    
+		    <ListView 
+				android:id="@+id/listViewSquadReserve" 
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:background="@color/dark_olive_green"
+				android:layout_below="@+id/textViewReserves"
+				android:layout_alignLeft="@+id/textViewReserves"
+				android:layout_alignRight="@+id/textViewReserves"
+				android:cacheColorHint="@android:color/transparent"
+				android:listSelector="@android:color/transparent"
+				/>
+		    
+		    <Button 
+				android:id="@+id/buttonSubstitute" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:background="@drawable/btn_orange"
+				android:text="Substitute"
+				android:layout_below="@+id/listViewSquadReserve"
+				android:layout_marginTop="10px"
+				android:layout_alignParentLeft="true"
+				android:layout_marginLeft="10px"
+				android:visibility="invisible"
+				/>
+		    
+		    <Button 
+				android:id="@+id/buttonCancel" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:background="@drawable/btn_orange"
+				android:text="Cancelar"
+				android:layout_below="@+id/listViewSquadReserve"
+				android:layout_marginTop="10px"
+				android:layout_alignParentRight="true"
+				android:layout_marginRight="10px"
+				android:layout_marginBottom="10px"
+				/>
+		    
+		    <TextView 
+		        android:layout_width="fill_parent"
+		        android:layout_height="5px"
+		        android:layout_below="@+id/buttonCancel"
+		        />
+		    
+		</RelativeLayout>
+		    
+	</RelativeLayout>
+</FrameLayout>

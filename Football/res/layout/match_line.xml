@@ -1,0 +1,97 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="50px"
+	android:background="#FFFFFFFF"
+    >
+    
+    <RelativeLayout
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:layout_marginTop="1px"
+		android:layout_marginRight="1px"
+		android:layout_marginLeft="1px"
+		android:layout_marginBottom="1px"
+		android:background="@color/dark_green_2"
+	    >
+	    
+        <RelativeLayout
+            android:id="@+id/relativeLayoutTeams"
+			android:layout_width="200px" 
+			android:layout_height="fill_parent"
+			android:background="@color/dark_green"
+		    >
+	    	<ImageView 
+	    	    android:id="@+id/imageViewHome"
+	    	    android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:background="@drawable/america_pe"
+				android:layout_centerVertical="true"
+				android:layout_alignParentLeft="true"
+	    	    />
+	    	
+	    	<TextView
+	    	    android:id="@+id/textViewHomeScore"
+	    	    android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:text="0"
+				android:layout_toLeftOf="@+id/textViewVs"
+				android:textSize="7pt"
+				android:layout_marginRight="5px"
+				android:layout_centerVertical="true"
+	    	    />
+	    	
+	    	<TextView
+	    	    android:id="@+id/textViewVs"
+	    	    android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:text="X"
+				android:textSize="7pt"
+				android:layout_centerVertical="true"
+				android:layout_centerHorizontal="true"
+	    	    />
+	    	
+	    	<TextView
+	    	    android:id="@+id/textViewAwayScore"
+	    	    android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:text="0"
+				android:layout_toRightOf="@+id/textViewVs"
+				android:textSize="7pt"
+				android:layout_marginLeft="5px"
+				android:layout_centerVertical="true"
+	    	    />
+	    	
+            <ImageView 
+	    	    android:id="@+id/imageViewAway"
+	    	    android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:background="@drawable/santa_cruz_pe"
+				android:layout_centerVertical="true"
+				android:layout_alignParentRight="true"
+	    	    />
+            
+        </RelativeLayout>
+        
+        <ImageView 
+	    	    android:id="@+id/imageViewInformation"
+	    	    android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:layout_toRightOf="@+id/relativeLayoutTeams"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="5px"
+	    	    />
+            
+       	<TextView
+    	    android:id="@+id/textViewInformation"
+    	    android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@+id/imageViewInformation"
+			android:textSize="7pt"
+			android:layout_marginLeft="5px"
+			android:layout_centerVertical="true"
+    	    />
+            
+    </RelativeLayout>
+    
+</RelativeLayout>

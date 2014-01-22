@@ -1,0 +1,437 @@
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:background="#FFFFFFFF">
+
+	<!--TOP MENU-->
+	<RelativeLayout
+		android:id="@+id/relativeLayoutTopMenu"
+		android:layout_width="fill_parent" 
+		android:layout_height="125px"
+		android:layout_marginLeft="2px"
+		android:layout_marginRight="2px"
+		android:layout_marginBottom="2px"
+		android:layout_marginTop="6px"
+		android:background="@color/dark_green">
+	
+		<!--FIRST LINE-->		
+		<ImageView 
+			android:id="@+id/imageViewTeamPortrait" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:src="@drawable/santa_cruz_pe"
+			android:layout_marginTop="10px"
+			android:layout_marginLeft="10px"/>
+			
+		<TextView 
+			android:id="@+id/textViewTeamName" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="@string/santa_cruz_pe"
+			android:layout_toRightOf="@+id/imageViewTeamPortrait"
+			android:layout_alignBottom="@+id/imageViewTeamPortrait"
+			android:layout_marginLeft="5px"
+			/>
+			
+		<TextView 
+			android:id="@+id/textViewCurrentYear" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="2011"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentTop="true"
+			android:textSize="10pt"
+			/>
+			
+		<TextView 
+			android:id="@+id/textViewTeamCash" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="957mil"
+			android:layout_toLeftOf="@+id/textViewCurrentYear"
+			android:layout_alignBottom="@+id/imageViewTeamPortrait"
+			android:layout_marginRight="15px"
+			/>
+			
+		<TextView 
+			android:id="@+id/textViewTeamCashLabel"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="@string/team_money"
+			android:layout_toLeftOf="@+id/textViewTeamCash"
+			android:layout_alignBottom="@+id/imageViewTeamPortrait"
+			android:layout_marginRight="2px"
+			/>
+			
+		<!--SECOND LINE-->
+		
+		<ImageView 
+			android:id="@+id/imageViewManagerPortrait" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:src="@drawable/default_profile"
+			android:layout_below="@+id/imageViewTeamPortrait"
+			android:layout_alignLeft="@+id/imageViewTeamPortrait"
+			android:layout_marginTop="5px"/>
+			
+		<TextView 
+			android:id="@+id/textViewManagerName" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="Pedro Vaz"
+			android:layout_toRightOf="@+id/imageViewManagerPortrait"
+			android:layout_alignBottom="@+id/imageViewManagerPortrait"
+			android:layout_marginLeft="5px"
+			/>
+		
+		<ProgressBar 
+			android:id="@+id/progressBarReputation" 
+			android:layout_width="fill_parent" 
+			style="?android:attr/progressBarStyleHorizontal" 
+			android:layout_height="20px" 
+			android:layout_alignBottom="@+id/imageViewManagerPortrait"
+			android:layout_alignLeft="@+id/textViewTeamCashLabel"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="5px"
+			android:progress="70"/>
+			
+		<TextView 
+			android:id="@+id/textViewManagerReputation" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="@string/reputation"
+			android:layout_alignLeft="@+id/progressBarReputation"
+			android:layout_above="@+id/progressBarReputation"
+			/>
+
+	</RelativeLayout>
+
+	<!--MIDDLE PANEL (SQUAD)-->
+	<RelativeLayout
+		android:id="@+id/relativeLayoutMiddlePanel" 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:layout_marginLeft="2px"
+		android:layout_marginRight="2px"
+		android:layout_marginBottom="2px"
+		android:background="@color/dark_green"
+		android:layout_below="@+id/relativeLayoutTopMenu"
+		android:layout_above="@+id/relativeLayoutBottomPanel">
+		
+		<TextView 
+			android:id="@+id/textViewSquad" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="@string/squad"
+			android:layout_marginLeft="5px"
+			/>
+			
+		<com.football.components.ExpandableButton  
+			android:id="@+id/expandableButtonTactics" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_marginTop="4px"
+			android:layout_marginRight="5px"/>
+		
+		<TextView 
+			android:id="@+id/textViewTactics" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="@string/formation"
+			android:layout_toLeftOf="@+id/expandableButtonTactics"
+			android:layout_marginRight="2px"
+			/>
+		
+		<LinearLayout 
+			android:id="@+id/LinearLayoutSquadPanel" 
+			android:layout_width="fill_parent" 
+			android:layout_height="30px"
+			android:orientation="horizontal"
+			android:layout_below="@+id/textViewSquad"
+			android:layout_marginTop="12px"
+			android:layout_marginLeft="5px"
+			android:layout_marginRight="5px"
+			android:background="@color/dark_green_2"
+			>
+		
+			<TextView 
+				android:id="@+id/textViewPlayerName" 
+				android:layout_width="250px" 
+				android:layout_height="wrap_content" 
+				android:text="@string/name"
+				android:layout_marginLeft="30px"
+				/>
+				
+			<TextView 
+				android:id="@+id/textViewPlayerPosition" 
+				android:layout_width="125px" 
+				android:layout_height="wrap_content" 
+				android:text="@string/position"
+				/>
+				
+			<TextView 
+				android:id="@+id/textViewPlayerStrenght" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:text="@string/strenght"
+				/>
+		
+		</LinearLayout>
+		
+		<ListView 
+			android:id="@+id/listViewSquad" 
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			android:background="@color/dark_olive_green"
+			android:layout_below="@+id/LinearLayoutSquadPanel"
+			android:layout_marginLeft="5px"
+			android:layout_marginRight="5px"
+			android:layout_marginBottom="30px"
+			android:cacheColorHint="#00000000"
+			/>
+		
+		<ImageView
+		    android:id="@+id/imageViewGreenBall"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:background="@drawable/green_ball"			
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="5px"
+			android:layout_alignLeft="@+id/listViewSquad"
+			/>
+		
+		<TextView
+		    android:id="@+id/TextViewGreenBall"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="@string/player_selected"
+			android:textSize="7pt"
+			android:layout_alignParentBottom="true"	
+			android:layout_toRightOf="@+id/imageViewGreenBall"
+			android:layout_marginLeft="5px"
+			/>
+		
+		<ImageView
+		    android:id="@+id/imageViewBlueBall"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:background="@drawable/blue_ball"			
+			android:layout_toRightOf="@+id/TextViewGreenBall"
+			android:layout_marginLeft="20px"
+			android:layout_alignBottom="@+id/imageViewGreenBall"
+			/>
+		
+		<TextView
+		    android:id="@+id/TextViewBlueBall"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="@string/player_reserve"
+			android:textSize="7pt"
+			android:layout_alignParentBottom="true"	
+			android:layout_toRightOf="@+id/imageViewBlueBall"
+			android:layout_marginLeft="5px"
+			/>
+		
+		<ImageView
+		    android:id="@+id/imageViewRedBall"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:background="@drawable/red_ball"			
+			android:layout_toRightOf="@+id/TextViewBlueBall"
+			android:layout_marginLeft="20px"
+			android:layout_alignBottom="@+id/imageViewGreenBall"
+			/>
+		
+		<TextView
+		    android:id="@+id/TextViewRedBall"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="@string/player_out"
+			android:textSize="7pt"
+			android:layout_alignParentBottom="true"	
+			android:layout_toRightOf="@+id/imageViewRedBall"
+			android:layout_marginLeft="5px"
+			/>
+		
+	</RelativeLayout>
+	
+	<!--BOTTOM PANEL (NEXT GAME)-->
+	<RelativeLayout
+		android:id="@+id/relativeLayoutBottomPanel" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="2px"
+		android:layout_marginRight="2px"
+		android:background="@color/dark_green"
+		android:layout_above="@+id/relativeLayoutBottomPanelButton">
+		
+	    <RelativeLayout
+			android:id="@+id/relativeLayoutNextGameLine" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="5px"
+			android:layout_marginTop="2px">
+			
+	        <ImageView 
+				android:id="@+id/imageViewToggle" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:src="@drawable/icon_hide"
+				android:layout_marginTop="2px"
+				android:layout_marginLeft="5px"
+				android:layout_centerVertical="true"/>
+	    	
+			<TextView 
+				android:id="@+id/textViewNextGame" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:text="@string/next_game"
+				android:layout_alignTop="@+id/imageViewToggle"
+				android:layout_toRightOf="@+id/imageViewToggle"
+				android:layout_marginLeft="10px"
+				android:layout_centerVertical="true"
+				/>
+	        
+	    </RelativeLayout>
+	    
+			
+		<TextView 
+			android:id="@+id/textViewNextGameChampionship" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="@string/championship_name"
+			android:layout_below="@+id/relativeLayoutNextGameLine"
+			android:layout_centerHorizontal="true"
+			/>
+		
+		<ImageView 
+			android:id="@+id/imageViewNextGameHomeTeamPortrait" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:src="@drawable/santa_cruz_pe"
+			android:layout_below="@+id/textViewNextGameChampionship"
+			android:layout_marginTop="5px"
+			android:layout_alignParentLeft="true"
+			android:layout_marginLeft="20px"/>
+		
+		<TextView 
+			android:id="@+id/textViewVs" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="@string/vs"
+			android:layout_alignBottom="@+id/imageViewNextGameHomeTeamPortrait"
+			android:layout_toRightOf="@+id/imageViewNextGameHomeTeamPortrait"
+			android:layout_marginLeft="10px"
+			android:layout_marginRight="10px"
+			android:layout_marginBottom="10px"
+			/>
+			
+		<ImageView 
+			android:id="@+id/imageViewNextGameAwayTeamPortrait" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:src="@drawable/sport_recife"
+			android:layout_toRightOf="@+id/textViewVs"
+			android:layout_alignTop="@+id/imageViewNextGameHomeTeamPortrait"/>
+			
+		<TextView 
+			android:id="@+id/textViewNextGameHomeAwayLabel" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="@string/home"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="20px"
+			android:layout_alignTop="@+id/imageViewNextGameHomeTeamPortrait"
+			/>
+			
+		<TextView 
+			android:id="@+id/textViewNextGameStadium" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="@string/santa_cruz_pe_stadium"
+			android:layout_toLeftOf="@+id/textViewNextGameHomeAwayLabel"
+			android:layout_alignTop="@+id/imageViewNextGameHomeTeamPortrait"
+			/>
+			
+		<TextView 
+			android:id="@+id/textViewNextGameLocal" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="@string/local"
+			android:layout_toLeftOf="@+id/textViewNextGameStadium"
+			android:layout_alignTop="@+id/imageViewNextGameHomeTeamPortrait"
+			/>
+			
+		<TextView 
+			android:id="@+id/textViewNextGameRoundNumber" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="10ª"
+			android:layout_alignLeft="@+id/textViewNextGameLocal"
+			android:layout_below="@+id/textViewNextGameLocal"
+			/>
+		
+		<TextView 
+			android:id="@+id/textViewNextGameRound" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="@string/round"
+			android:layout_toRightOf="@+id/textViewNextGameRoundNumber"
+			android:layout_marginLeft="2px"
+			android:layout_below="@+id/textViewNextGameLocal"
+			/>
+		
+	</RelativeLayout>
+	
+	<RelativeLayout
+		android:id="@+id/relativeLayoutBottomPanelButton" 
+		android:layout_width="fill_parent" 
+		android:layout_height="50px"
+		android:layout_marginLeft="2px"
+		android:layout_marginRight="2px"
+		android:layout_marginBottom="2px"
+		android:background="@color/dark_green"
+		android:layout_alignParentBottom="true">	
+		
+	    <RelativeLayout
+			android:id="@+id/relativeLayoutNextGameLineBottom" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="5px"
+			android:visibility="gone"
+			android:layout_centerVertical="true">
+			
+	        <ImageView 
+				android:id="@+id/imageViewToggle" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:src="@drawable/icon_show"
+				/>
+	    	
+			<TextView 
+				android:id="@+id/textViewNextGame" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:text="@string/next_game"
+				android:layout_alignTop="@+id/imageViewToggle"
+				android:layout_toRightOf="@+id/imageViewToggle"
+				android:layout_marginLeft="10px"
+				/>
+	        
+	    </RelativeLayout>
+	    
+		<Button 
+			android:id="@+id/buttonPlay" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:background="@drawable/btn_orange"
+			android:text="@string/play"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="20px"
+			android:layout_centerVertical="true"/>
+	    
+	</RelativeLayout>
+	    
+</RelativeLayout>

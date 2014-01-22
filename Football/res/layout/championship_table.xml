@@ -1,0 +1,120 @@
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/relativeLayout" 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent" 
+	android:background="@color/dark_green_2"
+	>
+	
+    <TextView
+        android:id="@+id/textViewChampionshipName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Campeonato Pernambucano"
+        android:layout_marginTop="10px"
+        android:gravity="center_horizontal"
+        android:background="@color/olive_drab_green"
+        android:layout_centerHorizontal="true"
+        />
+    
+    <TextView
+        android:id="@+id/textViewDivision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1ª Divisão"
+        android:layout_below="@+id/textViewChampionshipName"
+        android:layout_marginTop="10px"
+        android:paddingRight="10px"
+        android:paddingLeft="10px"
+        android:background="@color/dark_green"
+        />
+   	
+   	<TextView 
+	    android:id="@+id/textViewGoalsAgainst" 
+	    android:layout_width="30px" 
+	    android:layout_height="wrap_content"
+	    android:layout_alignTop="@+id/textViewDivision"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginRight="5px"
+	    android:layout_centerVertical="true"
+	    android:gravity="center"
+	    android:text="GC"
+    />
+   	
+   	<TextView 
+	    android:id="@+id/textViewGoalsPro" 
+	    android:layout_width="30px" 
+	    android:layout_height="wrap_content"
+	    android:layout_alignTop="@+id/textViewGoalsAgainst"
+	    android:layout_toLeftOf="@+id/textViewGoalsAgainst"
+	    android:layout_marginRight="20px"
+	    android:layout_centerVertical="true"
+	    android:gravity="center"
+	    android:text="GP"
+    />
+   	
+   	<TextView 
+	    android:id="@+id/textViewLoses" 
+	    android:layout_width="30px" 
+	    android:layout_height="wrap_content"
+	    android:layout_alignTop="@+id/textViewGoalsAgainst"
+	    android:layout_toLeftOf="@+id/textViewGoalsPro"
+	    android:layout_marginRight="20px"
+	    android:layout_centerVertical="true"
+	    android:gravity="center"
+	    android:text="D"
+    />
+   	
+   	<TextView 
+	    android:id="@+id/textViewDraws" 
+	    android:layout_width="30px" 
+	    android:layout_height="wrap_content"
+	    android:layout_alignTop="@+id/textViewGoalsAgainst"
+	    android:layout_toLeftOf="@+id/textViewLoses"
+	    android:layout_marginRight="20px"
+	    android:layout_centerVertical="true"
+	    android:gravity="center"
+	    android:text="E"
+    />
+   	
+   	<TextView 
+	    android:id="@+id/textViewVictories" 
+	    android:layout_width="30px" 
+	    android:layout_height="wrap_content"
+	    android:layout_alignTop="@+id/textViewGoalsAgainst"
+	    android:layout_toLeftOf="@+id/textViewDraws"
+	    android:layout_marginRight="20px"
+	    android:layout_centerVertical="true"
+	    android:gravity="center"
+	    android:text="V"
+    />
+   	
+   	<TextView
+	    android:id="@+id/textViewPoints" 
+	    android:layout_width="30px" 
+	    android:layout_height="wrap_content"
+	    android:layout_alignTop="@+id/textViewGoalsAgainst"
+	    android:layout_toLeftOf="@+id/textViewVictories"
+	    android:layout_marginRight="20px"
+	    android:layout_centerVertical="true"
+	    android:textStyle="bold"
+	    android:gravity="center"
+	    android:text="P"
+    />
+    
+    <ListView
+        android:id="@+id/listViewChampionshipTable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_green"
+        android:layout_below="@+id/textViewDivision"
+        android:clickable="false"
+        android:focusable="false"
+        android:divider="#FFFFFFFF"
+        android:dividerHeight="1px"
+        android:longClickable="false"
+        android:cacheColorHint="#00000000"
+
+        />
+
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<RelativeLayout 
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/relativeLayout" 
+android:layout_width="fill_parent" 
+android:layout_height="wrap_content" 
+>
+	<ImageView 
+	    android:id="@+id/imageViewFlag" 
+	    android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+    />
+   	<TextView 
+	    android:id="@+id/textViewName" 
+	    android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@+id/imageViewFlag"
+	    android:layout_marginLeft="5px"
+	    android:layout_centerVertical="true"
+    />
+   	
+   	<TextView 
+	    android:id="@+id/textViewGoalsAgainst" 
+	    android:layout_width="30px" 
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginRight="5px"
+	    android:layout_centerVertical="true"
+	    android:gravity="center"
+    />
+   	
+   	<TextView 
+	    android:id="@+id/textViewGoalsPro" 
+	    android:layout_width="30px" 
+	    android:layout_height="wrap_content"
+	    android:layout_toLeftOf="@+id/textViewGoalsAgainst"
+	    android:layout_marginRight="20px"
+	    android:layout_centerVertical="true"
+	    android:gravity="center"
+    />
+   	
+   	<TextView 
+	    android:id="@+id/textViewLoses" 
+	    android:layout_width="30px" 
+	    android:layout_height="wrap_content"
+	    android:layout_toLeftOf="@+id/textViewGoalsPro"
+	    android:layout_marginRight="20px"
+	    android:layout_centerVertical="true"
+	    android:gravity="center"
+    />
+   	
+   	<TextView 
+	    android:id="@+id/textViewDraws" 
+	    android:layout_width="30px" 
+	    android:layout_height="wrap_content"
+	    android:layout_toLeftOf="@+id/textViewLoses"
+	    android:layout_marginRight="20px"
+	    android:layout_centerVertical="true"
+	    android:gravity="center"
+    />
+   	
+   	<TextView 
+	    android:id="@+id/textViewVictories" 
+	    android:layout_width="30px" 
+	    android:layout_height="wrap_content"
+	    android:layout_toLeftOf="@+id/textViewDraws"
+	    android:layout_marginRight="20px"
+	    android:layout_centerVertical="true"
+	    android:gravity="center"
+    />
+   	
+   	<TextView
+	    android:id="@+id/textViewPoints" 
+	    android:layout_width="30px" 
+	    android:layout_height="wrap_content"
+	    android:layout_toLeftOf="@+id/textViewVictories"
+	    android:layout_marginRight="20px"
+	    android:layout_centerVertical="true"
+	    android:textStyle="bold"
+	    android:gravity="center"
+    />
+
+</RelativeLayout>

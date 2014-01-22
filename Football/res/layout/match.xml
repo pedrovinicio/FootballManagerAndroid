@@ -1,0 +1,79 @@
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/relativeLayout"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:background="@color/dark_green_2"
+	>
+	
+    <TextView 
+		android:id="@+id/textViewChampionshipName" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:layout_marginTop="10px"
+		android:gravity="center_horizontal"
+		android:background="@color/olive_drab_green"
+		android:text="Campeonato Pernambucano"/>
+    
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTime"
+        android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10px"
+		android:layout_centerHorizontal="true"
+		android:background="@color/dark_green"
+		android:layout_below="@+id/textViewChampionshipName"
+		> 
+		<TextView 
+			android:id="@+id/textViewTime" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10px"
+			android:layout_marginRight="10px"
+			android:layout_alignLeft="@+id/progressBarTime"
+			android:text="@string/first_time"/>
+    
+	    <ProgressBar 
+			android:id="@+id/progressBarTime" 
+			android:layout_width="fill_parent" 
+			style="?android:attr/progressBarStyleHorizontal" 
+			android:layout_height="20px" 
+			android:layout_below="@+id/textViewTime"
+			android:layout_marginTop="5px"
+			android:layout_marginLeft="10px"
+			android:layout_marginRight="10px"
+			android:layout_marginBottom="10px"
+			android:progress="70"/>
+        
+    </RelativeLayout>
+    
+    <TextView 
+		android:id="@+id/textViewFirstDivision" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:layout_marginTop="10px"
+		android:text="1ª Divisão"
+		android:paddingLeft="20px"
+		android:paddingRight="20px"
+		android:background="@color/dark_green"
+		android:layout_below="@+id/relativeLayoutTime"/>
+    
+    <com.football.components.MatchTable
+        android:id="@+id/matchTable" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/textViewFirstDivision"
+		android:orientation="vertical"
+		android:background="@color/dark_green"
+		android:padding="5px"
+        />
+       
+    <include 
+        android:id="@+id/layoutSubstitution" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        layout="@layout/substitution"
+        />
+    
+</RelativeLayout>

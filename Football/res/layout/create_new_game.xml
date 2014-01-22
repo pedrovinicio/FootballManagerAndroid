@@ -1,0 +1,104 @@
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/relativeLayout" 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:background="@color/dark_green_2"
+	>
+
+	<RelativeLayout 
+		android:id="@+id/relativeLayout" 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:background="@color/dark_green"
+		android:layout_marginTop="30px"
+		android:layout_marginLeft="30px"
+		android:layout_marginRight="30px"
+		android:layout_marginBottom="30px"
+		>
+		
+		<TextView 
+			android:id="@+id/textViewManagerName"
+			android:text="@string/enter_manager_name"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20px"
+			android:layout_marginLeft="20px"
+			android:layout_marginRight="20px"
+		/>
+		
+		<EditText 
+			android:id="@+id/editTextManagerName"
+			android:layout_width="fill_parent" 
+			android:layout_height="80px"
+			android:layout_below="@+id/textViewManagerName"
+			android:layout_marginTop="10px"
+			android:layout_alignLeft="@+id/textViewManagerName"
+			android:layout_alignRight="@+id/textViewManagerName"
+		/>
+		
+		<TextView 
+			android:id="@+id/textViewSelectChampionship"
+			android:text="@string/select_championship"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/editTextManagerName"
+			android:layout_marginTop="20px"
+			android:layout_alignLeft="@+id/textViewManagerName"
+			android:layout_alignRight="@+id/textViewManagerName"
+		/>
+		
+		<ListView 
+			android:id="@+id/listViewChampionship" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:layout_below="@+id/textViewSelectChampionship" 
+			android:layout_marginTop="10px"
+			android:layout_alignLeft="@+id/textViewManagerName"
+			android:layout_alignRight="@+id/textViewManagerName"
+			android:background="@color/olive_drab_green"
+		/>
+		
+		<TextView 
+			android:id="@+id/textViewAvaiableTeam"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:text="@string/teams_available"
+			android:layout_below="@+id/listViewChampionship"
+			android:layout_marginTop="20px"
+			android:layout_alignLeft="@+id/textViewManagerName"
+			android:layout_alignRight="@+id/textViewManagerName"
+		/>
+		
+		<ListView
+		    android:id="@+id/listViewTeams"
+		    android:layout_width="wrap_content"
+		    android:layout_height="300px"
+		    android:gravity="center"
+		    android:layout_below="@+id/textViewAvaiableTeam"
+		    android:layout_marginTop="10px"
+		    android:layout_alignLeft="@+id/textViewManagerName"
+			android:layout_alignRight="@+id/textViewManagerName"
+			android:cacheColorHint="#00000000"
+			android:fadeScrollbars="true"
+			android:background="@color/olive_drab_green"
+			/>
+		
+		
+		<Button
+			android:id="@+id/buttonPlay" 
+			android:background="@drawable/btn_orange"
+			android:text="@string/play"
+			android:layout_marginTop="10px"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/listViewTeams"
+			android:layout_centerHorizontal="true"
+		/>
+		
+	</RelativeLayout>
+	
+	
+
+
+</RelativeLayout>

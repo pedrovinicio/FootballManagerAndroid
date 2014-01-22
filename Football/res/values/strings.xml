@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Football</string>
+    
+    <!--COMMON STRINGS-->
+    <string name="away">(Fora)</string>
+    <string name="defender">Zagueiro</string>
+    <string name="enter_manager_name">Digite seu nome:</string>
+    <string name="first_time">1º Primeiro tempo</string>
+    <string name="formation">Formação:</string>
+    <string name="forward">Atacante</string>
+    <string name="goalkeeper">Goleiro</string>
+    <string name="home">(Casa)</string>
+    <string name="load_game">Carregar jogo</string>
+    <string name="local">Local: </string>
+    <string name="name">Nome</string>
+    <string name="next_game">Próximo Jogo</string>
+    <string name="new_game">Novo jogo</string>
+    <string name="no_championship_selected">-Sem campeonato selecionado-</string>
+    <string name="no_team_available">Sem times disponíveis</string>
+    <string name="no_team_raffled">Sem time sorteado</string>
+    <string name="midfield">Meio-campo</string>
+    <string name="options">Opções</string>
+    <string name="play">Jogar</string>
+    <string name="player_out">fora do jogo</string>
+    <string name="player_reserve">Reserva</string>
+    <string name="player_selected">Titular</string>
+    <string name="position">Posição</string>
+    <string name="quit">Sair</string>
+    <string name="second_time">2º Segundo tempo</string>
+    <string name="select_championship">Escolha o campeonato:</string>
+    <string name="reputation">Reputação</string>
+    <string name="round">Rodada</string>
+    <string name="squad">Plantel</string>
+    <string name="strenght">Força</string>
+    <string name="team_money">Caixa:</string>
+     <string name="teams_available">Times disponíveis</string>
+    <string name="team_raffle">Sorteio de time</string>
+    <string name="vs">X</string>
+    
+	<!--CHAMPIONSHIPS -->
+    <string name="championship_name">Campeonato Pernambucano</string>
+	    
+    <!--TEAMS-->
+    <string name="santa_cruz_pe">Santa Cruz FC</string>
+    <string name="santa_cruz_pe_stadium">Arruda</string>
+    
+</resources>
